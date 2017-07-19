@@ -6,7 +6,7 @@ Build: [![Circle CI](https://circleci.com/gh/sillelien/dollar-camel.png?style=ba
 
 # Dollar Camel [![Beta](https://img.shields.io/badge/Status-Beta-green.svg?style=flat)](http://github.com/sillelien/dollar-camel)
 
-Camel wrapped up for use in Dollar.
+Camel wrapped up as a single 'Uber Jar' for use in Dollar.
 
 To get started you'll need this repository:
 
@@ -30,6 +30,6 @@ and this dependency
         <dependency>
             <groupId>com.sillelien</groupId>
             <artifactId>dollar-camel</artifactId>
-            <version>0.1.6</version>
+            <version>0.1.8</version>
         </dependency>
 ```
