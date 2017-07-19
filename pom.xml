@@ -96,19 +96,19 @@
                     </relocations>
 
                     <transformers>
+         <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
+                            <!--<resource>META-INF/services/org/apache/camel/TypeConverter</resource>-->
+                        <!--</transformer>-->
+
+                        <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
+                            <!--<resource>META-INF/services/dollar/internal/camel/TypeConverter</resource>-->
+                        <!--</transformer>-->
 
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
 
-                        <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
-                            <!--<resource>META-INF/services/org/apache/camel/TypeConverter</resource>-->
-                        <!--</transformer>-->
 
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/services/dollar/internal/camel/TypeConverter</resource>
-                        </transformer>
-
-                                      <!--<transformer-->
+                        <!--<transformer-->
                                 <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
                             <!--<resource>META-INF/maven/plugin.xml</resource>-->
                         <!--</transformer>-->
