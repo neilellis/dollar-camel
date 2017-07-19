@@ -11,22 +11,24 @@
 
     <artifactId>dollar-camel</artifactId>
     <version>0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-http</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-test</artifactId>
-            <scope>test</scope>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <scope>runtime</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -65,90 +67,60 @@
                         </filter>
                     </filters>
                     <relocations>
+
                         <relocation>
                             <pattern>org.apache.camel</pattern>
                             <shadedPattern>dollar.internal.camel</shadedPattern>
+                            <!--<excludes>-->
+                                <!--<exclude>org.apache.camel</exclude>-->
+                            <!--</excludes>-->
                         </relocation>
+
                         <relocation>
                             <pattern>javax.servlet</pattern>
                             <shadedPattern>dollar.internal.camel.javax.servlet</shadedPattern>
                         </relocation>
+
                         <relocation>
                             <pattern>org.apache.commons</pattern>
                             <shadedPattern>dollar.internal.camel.commons</shadedPattern>
                         </relocation>
-                        <relocation>
-                            <pattern>com.sun.xml.bind</pattern>
-                            <shadedPattern>dollar.internal.camel.xmlbind</shadedPattern>
-                        </relocation>
+                        <!--<relocation>-->
+                            <!--<pattern>com.sun.xml.bind</pattern>-->
+                            <!--<shadedPattern>dollar.internal.camel.xmlbind</shadedPattern>-->
+                        <!--</relocation>-->
 
                     </relocations>
+
                     <transformers>
 
-
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.handlers</resource>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                            <resource>META-INF/spring.schemas</resource>
-                        </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                             <resource>META-INF/services/org/apache/camel/TypeConverter</resource>
                         </transformer>
+
                         <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                             <resource>META-INF/services/dollar/internal/camel/TypeConverter</resource>
                         </transformer>
+
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                        <transformer
-                                implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                            <resource>META-INF/maven/plugin.xml</resource>
-                        </transformer>
-                        <transformer
-                                implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                            <resource>META-INF/spring.tooling</resource>
-                        </transformer>
-                        <transformer
-                                implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                            <resource>META-INF/info.xml</resource>
-                        </transformer>
+
                         <!--<transformer-->
                                 <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/DISCLAIMER</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/README.txt</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/DEPENDENCIES</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/LICENSE</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/LICENSE.txt</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/NOTICE</resource>-->
-                        <!--</transformer>-->
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/NOTICE.txt</resource>-->
+                            <!--<resource>META-INF/maven/plugin.xml</resource>-->
                         <!--</transformer>-->
 
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
+
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
                             <addHeader>false</addHeader>
                         </transformer>
+
                     </transformers>
                 </configuration>
+
                 <executions>
                     <execution>
                         <phase>package</phase>
