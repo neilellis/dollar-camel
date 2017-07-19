@@ -12,23 +12,289 @@
     <artifactId>dollar-camel</artifactId>
     <version>0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
+    <properties>
+        <camel.version>2.19.1</camel.version>
+    </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-core</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-http</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- camel components -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${camel.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-http</artifactId>
+            <version>${camel.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-atmosphere-websocket</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-atom</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-cache</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-core-xml</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-csv</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-ftp</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-guava-eventbus</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-http</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-http-common</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-http4</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-irc</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jclouds</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jdbc</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jetty-common</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jetty</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jetty9</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jgroups</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-jsch</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-mail</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-mina2</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-mongodb3</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-netty4</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-netty4-http</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-quartz2</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-rss</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-servlet</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-servletlistener</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-soap</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-sql</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-stax</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-stream</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-stomp</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-syslog</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-tarfile</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-weather</artifactId>
+            <version>${camel.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-websocket</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-xmlrpc</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-xmpp</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.camel</groupId>-->
+            <!--<artifactId>camel-zipfile</artifactId>-->
+            <!--<version>${camel.version}</version>-->
+        <!--</dependency>-->
+
+
     </dependencies>
 
     <build>
@@ -63,25 +329,33 @@
                                 <exclude>META-INF/*.RSA</exclude>
                                 <exclude>META-INF/*.INF</exclude>
                                 <exclude>META-INF/license</exclude>
+                                <exclude>META-INF/LICENSE</exclude>
+                                <exclude>LICENSE</exclude>
                                 <exclude>META-INF/services</exclude>
                                 <exclude>com.google.common.**</exclude>
                             </excludes>
                         </filter>
                     </filters>
                     <relocations>
-
                         <relocation>
                             <pattern>org.apache.camel</pattern>
                             <shadedPattern>dollar.internal.camel</shadedPattern>
                         </relocation>
+
                         <relocation>
-                            <pattern>META-INF.services.org.apache.camel</pattern>
-                            <shadedPattern>META-INF.services.dollar.internal.camel</shadedPattern>
+                            <pattern>META-INF/services/org.apache.camel</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel</shadedPattern>
+                        </relocation>
+
+
+                        <relocation>
+                            <pattern>javax</pattern>
+                            <shadedPattern>dollar.internal.camel.javax</shadedPattern>
                         </relocation>
 
                         <relocation>
-                            <pattern>javax.servlet</pattern>
-                            <shadedPattern>dollar.internal.camel.javax.servlet</shadedPattern>
+                            <pattern>META-INF/services/javax</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.javax</shadedPattern>
                         </relocation>
 
                         <relocation>
@@ -90,22 +364,104 @@
                         </relocation>
 
                         <relocation>
+                            <pattern>META-INF/services/org.apache.commons</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.commons</shadedPattern>
+                        </relocation>
+
+                        <relocation>
                             <pattern>com.sun</pattern>
                             <shadedPattern>dollar.internal.camel.sun</shadedPattern>
                         </relocation>
 
+                        <relocation>
+                            <pattern>META-INF/services/com.sun</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.sun</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>rx</pattern>
+                            <shadedPattern>dollar.internal.camel.rx</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/rx</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.rx</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>trax</pattern>
+                            <shadedPattern>dollar.internal.camel.trax</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/trax</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.trax</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>mozilla</pattern>
+                            <shadedPattern>dollar.internal.camel.mozilla</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>META-INF/services/mozilla</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.mozilla</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>org</pattern>
+                            <shadedPattern>dollar.internal.camel.org</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/org</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.org</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>com</pattern>
+                            <shadedPattern>dollar.internal.camel.com</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/com</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.com</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>net</pattern>
+                            <shadedPattern>dollar.internal.camel.net</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/net</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.net</shadedPattern>
+                        </relocation>
+
+
+                        <relocation>
+                            <pattern>io</pattern>
+                            <shadedPattern>dollar.internal.camel.io</shadedPattern>
+                        </relocation>
+
+                        <relocation>
+                            <pattern>META-INF/services/io</pattern>
+                            <shadedPattern>META-INF/services/dollar.internal.camel.io</shadedPattern>
+                        </relocation>
+
+
                     </relocations>
 
                     <transformers>
-         <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
-                            <!--<resource>META-INF/services/org/apache/camel/TypeConverter</resource>-->
+                        <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
+                        <!--<resource>META-INF/services/org/apache/camel/TypeConverter</resource>-->
                         <!--</transformer>-->
 
                         <!--<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">-->
-                            <!--<resource>META-INF/services/dollar/internal/camel/TypeConverter</resource>-->
+                        <!--<resource>META-INF/services/dollar/internal/camel/TypeConverter</resource>-->
                         <!--</transformer>-->
 
-
+                        <transformer
+                                implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
 
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
@@ -114,6 +470,7 @@
                                 implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
                             <addHeader>false</addHeader>
                         </transformer>
+
 
                     </transformers>
                 </configuration>
