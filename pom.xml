@@ -63,6 +63,7 @@
                                 <exclude>META-INF/*.RSA</exclude>
                                 <exclude>META-INF/*.INF</exclude>
                                 <exclude>META-INF/license</exclude>
+                                <exclude>META-INF/services</exclude>
                                 <exclude>com.google.common.**</exclude>
                             </excludes>
                         </filter>
@@ -108,10 +109,6 @@
                                 implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
 
 
-                        <!--<transformer-->
-                                <!--implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">-->
-                            <!--<resource>META-INF/maven/plugin.xml</resource>-->
-                        <!--</transformer>-->
 
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer"/>
