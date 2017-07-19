@@ -4,7 +4,7 @@ ${HEADER}
 
 # Dollar Camel ${STATE_BETA}
 
-Camel wrapped up for use in Dollar.
+Camel wrapped up as a single 'Uber Jar' for use in Dollar.
 
 To get started you'll need this repository:
 
