@@ -492,7 +492,7 @@
         <repository>
             <id>bintray-sillelien-maven</id>
             <name>sillelien-maven</name>
-            <url>https://api.bintray.com/maven/sillelien/maven/dollar/;publish=1</url>
+            <url>https://api.bintray.com/maven/sillelien/maven/dollar-camel/;publish=1</url>
         </repository>
     </distributionManagement>
 
