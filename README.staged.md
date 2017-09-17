@@ -30,6 +30,6 @@ and this dependency
         <dependency>
             <groupId>com.sillelien</groupId>
             <artifactId>dollar-camel</artifactId>
-            <version>0.1.61</version>
+            <version>0.1.63</version>
         </dependency>
 ```
